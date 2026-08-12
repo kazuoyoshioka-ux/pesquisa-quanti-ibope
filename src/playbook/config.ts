@@ -4,7 +4,7 @@ import type { OptionDef } from './types'
 // Editing this file is the intended way to change questions/options until
 // the future admin area ("Administração do Playbook") ships.
 
-export const TOTAL_STEPS = 12
+export const TOTAL_STEPS = 11
 
 export const NECESSIDADE_OPTIONS: OptionDef[] = [
   { id: 'mercado', label: 'Conhecer o mercado' },
@@ -15,6 +15,7 @@ export const NECESSIDADE_OPTIONS: OptionDef[] = [
   { id: 'satisfacao', label: 'Medir satisfação' },
   { id: 'conceito', label: 'Avaliar conceito/produto antes do lançamento' },
   { id: 'preco', label: 'Definir ou avaliar preço' },
+  { id: 'comunicacao', label: 'Avaliar comunicação' },
   { id: 'segmentar', label: 'Segmentar consumidores' },
   { id: 'campanha', label: 'Avaliar campanha' },
   { id: 'outros', label: 'Outros' },
@@ -121,6 +122,7 @@ export const PERIODO_OPTIONS: OptionDef[] = [
   { id: '3_meses', label: 'Últimos 3 meses' },
   { id: '6_meses', label: 'Últimos 6 meses' },
   { id: '12_meses', label: 'Últimos 12 meses' },
+  { id: 'Não aplicável', label: 'Não aplicável' },
   { id: 'outro', label: 'Outro' },
 ]
 
@@ -160,22 +162,12 @@ export const DATA_CRITICA_EXEMPLOS = [
 ]
 
 export const ENTREGAVEIS_OPTIONS: OptionDef[] = [
-  { id: 'base_dados', label: 'Base de dados' },
+  { id: 'base_dados', label: 'Base de dados - xlx csv' },
   { id: 'apresentacao', label: 'Apresentação' },
   { id: 'tabulacao', label: 'Tabulação' },
   { id: 'cruzamentos', label: 'Cruzamentos específicos' },
+  { id: 'ferramentas', label: 'Ferramentas IBOPE - ex Choices' },
   { id: 'outro', label: 'Outro' },
 ]
 
-export const TOOLTIPS: Record<string, string> = {
-  representatividade:
-    'Os resultados precisam refletir uma população maior e não apenas as pessoas entrevistadas?',
-  quantificar_explorar:
-    'Quantificar = medir números e percentuais. Explorar = entender motivações e razões em profundidade.',
-  amostra:
-    'Amostra é o grupo de pessoas efetivamente entrevistadas, usado para representar um público maior.',
-  segmentacao:
-    'Segmentar é analisar os resultados separadamente por grupos (ex: por idade ou região) além da leitura geral.',
-  criterios_qualificacao:
-    'São filtros que definem quem pode ou não responder à pesquisa.',
-}
+
