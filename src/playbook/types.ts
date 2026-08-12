@@ -2,7 +2,6 @@
 // Kept separate from UI so new questions / rules can be added without touching components.
 
 export type TipoInformacao = 'quantificar' | 'explorar' | 'ambos'
-export type Representatividade = 'sim' | 'nao' | 'ainda_nao'
 export type Questionario = 'tem_questionario' | 'tem_temas' | 'nada_definido'
 
 export interface Answers {
@@ -22,7 +21,6 @@ export interface Answers {
   periodoOutro: string
   geografia: string | null
   geografiaDetalhe: string
-  representatividade: Representatividade | null
   segmentacoes: string[]
   segmentacaoOutro: string
   questionario: Questionario | null
