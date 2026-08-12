@@ -89,7 +89,7 @@ export function buildDiagnosis(a: Answers): Diagnosis {
     : 'Nenhum critério obrigatório informado.'
 
   // Comportamento / período
-  const comportamentoLabel = label(COMPORTAMENTO_OPTIONS, a.comportamento)
+  comportamentoLabel = label(COMPORTAMENTO_OPTIONS, a.comportamento)
   const precisaPeriodo =
     a.comportamento != null &&
     COMPORTAMENTOS_QUE_PEDEM_PERIODO.includes(a.comportamento)
@@ -100,7 +100,7 @@ export function buildDiagnosis(a: Answers): Diagnosis {
     a.periodo === 'outro' && a.periodoOutro ? a.periodoOutro : label(PERIODO_OPTIONS, a.periodo)
 
   // Geografia
-  const abrangencia =
+  abrangencia =
     a.geografia === 'outro' && a.geografiaDetalhe
       ? a.geografiaDetalhe
       : label(GEOGRAFIA_OPTIONS, a.geografia) ?? 'Não informado'
@@ -134,7 +134,7 @@ export function buildDiagnosis(a: Answers): Diagnosis {
   }
 
   // Segmentações
-  const segmentacoesLabels = labels(SEGMENTACAO_OPTIONS, a.segmentacoes)
+  segmentacoesLabels = labels(SEGMENTACAO_OPTIONS, a.segmentacoes)
   const segmentacoes = segmentacoesLabels.length
     ? segmentacoesLabels.join(', ') + (a.segmentacaoOutro ? ` (${a.segmentacaoOutro})` : '')
     : 'Nenhuma segmentação específica solicitada.'
@@ -162,20 +162,20 @@ export function buildDiagnosis(a: Answers): Diagnosis {
   }
 
   // Entregáveis
-  const entregaveisLabels = labels(ENTREGAVEIS_OPTIONS, a.entregaveis)
+  entregaveisLabels = labels(ENTREGAVEIS_OPTIONS, a.entregaveis)
   const entregaveis = entregaveisLabels.length
     ? entregaveisLabels.join(', ') + (a.entregavelOutro ? ` (${a.entregavelOutro})` : '')
     : 'Não informado.'
   if (!entregaveisLabels.length) abertos.push('Entregáveis esperados pelo cliente ainda não foram definidos.')
 
   // Prazo
-  const prazo = a.prazoData
+  prazo = a.prazoData
     ? `Entrega até ${a.prazoData}${a.dataCritica ? ` — data crítica relacionada: ${a.dataCritica}` : ''}`
     : 'Prazo ainda não informado.'
   if (!a.prazoData) abertos.push('Data limite para entrega dos resultados não foi informada.')
 
   // Recomendação preliminar (narrative)
-  const recAudiencia = publicoLabel !== 'Não informado' ? publicoLabel.toLowerCase() : 'público a definir'
+  recAudiencia = publicoLabel !== 'Não informado' ? publicoLabel.toLowerCase() : 'público a definir'
   const recMetodo =
     a.tipoInformacao === 'explorar'
       ? 'qualitativa'
