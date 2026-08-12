@@ -219,7 +219,6 @@ export function buildBriefingText(a: Answers, d: Diagnosis): string {
     comportamentoLabel ? `Comportamento exigido: ${comportamentoLabel}${periodoLabel ? ` (período: ${periodoLabel})` : ''}` : '',
     `Geografia: ${d.abrangencia}`,
     `Metodologia preliminar: ${d.metodologiaSugerida}`,
-    `Necessidade de representatividade: ${d.necessidadeAmostra}`,
     `Segmentações: ${d.segmentacoes}`,
     `Questionário: ${d.questionarioResumo}`,
     `Amostra: ${a.amostraPreliminar ? `${a.amostraPreliminar} (preliminar, informada pelo comercial — sujeita à validação metodológica)` : 'A definir pelo time de pesquisa'}`,
