@@ -76,7 +76,7 @@ export function buildDiagnosis(a: Answers): Diagnosis {
   }
 
   // Público-alvo
-  const publicoLabel =
+  publicoLabel =
     a.publicoAlvo === 'outro' && a.publicoAlvoOutro
       ? a.publicoAlvoOutro
       : label(PUBLICO_ALVO_OPTIONS, a.publicoAlvo) ?? 'Não informado'
