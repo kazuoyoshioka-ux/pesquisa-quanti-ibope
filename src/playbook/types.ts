@@ -6,7 +6,7 @@ export type Representatividade = 'sim' | 'nao' | 'ainda_nao'
 export type Questionario = 'tem_questionario' | 'tem_temas' | 'nada_definido'
 
 export interface Answers {
-  necessidade: string | null
+  necessidade: string[]
   necessidadeOutro: string
   decisaoNegocio: string
   objetivos: string[]
