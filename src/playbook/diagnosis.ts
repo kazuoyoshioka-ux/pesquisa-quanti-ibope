@@ -43,8 +43,8 @@ export function buildDiagnosis(a: Answers): Diagnosis {
   const abertos: string[] = []
 
   // Necessidade / tipo de pesquisa
-  const publicoLabels = labels(PUBLICO_ALVO_OPTIONS, a.publicoAlvo)
-  const publicoLabel = publicoLabels.length
+  let publicoLabels = labels(PUBLICO_ALVO_OPTIONS, a.publicoAlvo)
+  let publicoLabel = publicoLabels.length
     a.necessidade === 'outros' && a.necessidadeOutro
       ? a.necessidadeOutro
       : label(NECESSIDADE_OPTIONS, a.necessidade) ?? 'Não informado'
